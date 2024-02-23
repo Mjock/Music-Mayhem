@@ -1,0 +1,92 @@
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Centering content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); /* Unique gradient background */
+    background-attachment: fixed; /* Ensures background remains fixed */
+}
+
+/* Styling the form container */
+.registration-form {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center; /* Centering content inside the form */
+    width: 100%; /* Adjusted width */
+    max-width: 585px; /* Limiting the width of the form */
+    margin-top: auto; /* Center the form horizontally */
+}
+
+/* Styling the form heading */
+.registration-form h1 {
+    font-size: 45px; /* Heading font size */
+    color: White; /* Heading color */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+/* Styling for form labels */
+.registration-form label {
+    display: block; /* Make labels block-level elements */
+    margin-bottom: 10px; /* Add space below each label */
+}
+
+/* Styling for form inputs */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form textarea {
+    width: calc(100% - 20px); /* Adjusted input width */
+    height: 40px; /* Input height */
+    padding: 10px; /* Input padding */
+    margin-bottom: 20px; /* Add space below each input */
+    border: none; /* Remove border */
+    border-bottom: 2px solid #333; /* Add bottom border */
+    background: transparent; /* Transparent background */
+    box-sizing: border-box; /* Include padding and border in input's total width */
+    color: #fff; /* Text color */
+}
+
+/* Placeholder style */
+.registration-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff; /* White placeholder text color */
+}
+.registration-form ::-moz-placeholder { /* Firefox 19+ */
+    color: #fff; /* White placeholder text color */
+}
+.registration-form :-ms-input-placeholder { /* IE 10+ */
+    color: #fff; /* White placeholder text color */
+}
+.registration-form :-moz-placeholder { /* Firefox 18- */
+    color: #fff; /* White placeholder text color */
+}
+
+/* Styling for checkboxes */
+.registration-form input[type="radio"] {
+    width: auto; /* Set width to auto */
+    margin-right: 10px; /* Add margin to separate checkbox from label */
+}
+
+/* Styling for submit button */
+.registration-form input[type="submit"] {
+    display: inline-block; /* Make submit button inline */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition effect */
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: #555; /* Darken background color on hover */
+}

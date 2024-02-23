@@ -1,0 +1,25 @@
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Applying background color */
+body {
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); 
+    background-attachment: fixed;/* Uniq
+}
+
+/* Additional styles for content */
+.content {
+    margin-top: 200px; /* Adjust as needed */
+	font-size:xxx-large;
+    text-align: center;
+    color: #ffffff;
+}
+.h2 {
+    /* Adjust as needed */
+	font-size:xx-large;
+    text-align: center;
+    color: #ffffff;
+}

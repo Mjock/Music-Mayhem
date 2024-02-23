@@ -1,0 +1,30 @@
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Centering content vertically and horizontally */
+body.admin-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); /* Unique gradient background */
+}
+
+/* Styling the heading */
+h1 {
+    font-size: 48px; /* Increase heading size for emphasis */
+    color: #ffffff; /* Change heading color to white */
+   margin-top: auto; /* Center vertically */
+    margin-bottom: auto; /* Center vertically */
+     text-align: center;
+}
+h2 {
+    font-size: 48px; /* Increase heading size for emphasis */
+    color: #ffffff; /* Change heading color to white */
+   margin-top: auto; /* Center vertically */
+    margin-bottom: auto; /* Center vertically */
+     text-align: center;
+}

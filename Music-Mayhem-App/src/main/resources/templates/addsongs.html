@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Songs</title>
+<link rel="stylesheet" href="navstyle.css"> 
+<link rel="stylesheet" type="text/css" href="addsongs.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<style>
+h3{
+color:white;
+}</style>
+<nav>
+<ul>
+
+<h3>Hello, <span th:text="${session.username}"></span></h3>
+
+<li><a href="/adminhomeredirect">Home</a></li>
+
+<li><a href="/map-songs">Add Songs</a></li>
+
+<li><a href="/map-viewsongs">View Songs</a></li>
+
+<li><a href="/createplaylist">Create Playlist</a></li>
+
+<li><a href="/viewPlaylists">View Playlists</a></li>
+
+
+<li><a href="/logout">Logout</a></li>
+
+ </ul>
+</nav>
+
+<div class="addsongs">
+    <h1>Add Songs</h1>
+    <form action="add-songs" method="post">
+       
+        <input type="text" id="name" name="name" placeholder="Enter song name" required>
+        <br><br>
+       
+        <input type="text" id="artist" name="artist" placeholder="Enter song artist" required>
+        <br><br>
+        
+        <input type="text" id="genre" name="genre" placeholder="Enter song genre" required>
+        <br><br>
+        
+        <input type="text" id="link" name="link" placeholder="Enter song link" required	>
+        <br><br>
+        <input type="submit" value="Add Songs">
+    </form>
+</div>
+
+</body>
+</html>

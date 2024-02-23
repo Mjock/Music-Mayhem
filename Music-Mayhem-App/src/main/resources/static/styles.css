@@ -1,0 +1,341 @@
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); /* Create a unique gradient background */
+    overflow:hidden;
+}
+
+/* Centering content vertically and horizontally */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Styling the heading */
+h1 {
+    font-size: 48px; /* Increase heading size for emphasis */
+    color: #ffffff; /* Change heading color to white */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+/* Styling the subheading */
+h2 {
+    font-size: 24px;
+    color: #ffffff; /* Use white color for subheading */
+}
+
+/* Styling the links */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff; /* Use white color for links */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to the links */
+    padding: 10px 20px; /* Add padding to make links more clickable */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background color on hover */
+}
+
+/* Registration styles */
+.registration-form {
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent background for registration form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Adding a shadow effect */
+    text-align: center; /* Centering content inside the form */
+    max-width: 600px; /* Increase the maximum width of the form */
+    margin: 50px auto; /* Center the form horizontally */
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form textarea {
+    width: 340px; /* Calculate width with padding */
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    box-sizing: border-box;
+    color: black;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.registration-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white; /* White placeholder text color */
+}
+.registration-form ::-moz-placeholder { /* Firefox 19+ */
+    color: white; /* White placeholder text color */
+}
+.registration-form :-ms-input-placeholder { /* IE 10+ */
+    color: white; /* White placeholder text color */
+}
+.registration-form :-moz-placeholder { /* Firefox 18- */
+    color: white; /* White placeholder text color */
+}
+
+.registration-form input[type="submit"] {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff; /* Use white color for links */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to the links */
+    padding: 10px 20px; /* Add padding to make links more clickable */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.3s ease;
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Login styles */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background for login form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Adding a shadow effect */
+    text-align: center; /* Centering content inside the form */
+    max-width: 400px; /* Limiting the width of the form */
+    margin: 50px auto; /* Center the form horizontally */
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Calculate width with padding */
+    height: 50px; /* Increase height */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    box-sizing: border-box;
+    color: black;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.login-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white; /* White placeholder text color */
+}
+.login-form ::-moz-placeholder { /* Firefox 19+ */
+    color: white; /* White placeholder text color */
+}
+.login-form :-ms-input-placeholder { /* IE 10+ */
+    color: white; /* White placeholder text color */
+}
+.login-form :-moz-placeholder { /* Firefox 18- */
+    color: white; /* White placeholder text color */
+}
+
+.login-form input[type="submit"] {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff; /* Use white color for links */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to the links */
+    padding: 10px 20px; /* Add padding to make links more clickable */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.3s ease;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Admin home styles */
+.admin-home {
+    text-align: center; /* Center the content */
+    margin-top: 50px; /* Add some space from the top */
+}
+
+.admin-home h1 {
+    font-size: 48px; /* Increase heading size for emphasis */
+    color: #ffffff; /* Change heading color to white */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.admin-home h3 {
+    font-size: 24px; /* Increase subheading size */
+    color: #ffffff; /* Use white color for subheading */
+}
+/*styles for creation */
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Centering content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+    
+}
+
+/* Styling the form container */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Adding a shadow effect */
+    text-align: center; /* Centering content inside the form */
+    max-width: 600px; /* Limiting the width of the form */
+}
+
+/* Styling the form heading */
+.form-container h1 {
+    font-size: 24px; /* Heading font size */
+    color: #333; /* Heading color */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+/* Styling for form labels */
+.form-container label {
+    display: block; /* Make labels block-level elements */
+    margin-bottom: 10px; /* Add space below each label */
+}
+
+/* Styling for form inputs */
+.form-container input[type="text"] {
+    width: 100%; /* Full width input */
+    height: 40px; /* Input height */
+    padding: 10px; /* Input padding */
+    margin-bottom: 20px; /* Add space below each input */
+    border: none; /* Remove border */
+    border-bottom: 2px solid #333; /* Add bottom border */
+    box-sizing: border-box; /* Include padding and border in input's total width */
+}
+
+/* Styling for checkboxes */
+.form-container input[type="checkbox"] {
+    width: auto; /* Set width to auto */
+    margin-right: 10px; /* Add margin to separate checkbox from label */
+}
+
+/* Styling for submit button */
+.form-container input[type="submit"] {
+    display: inline-block; /* Make submit button inline */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition effect */
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #555; /* Darken background color on hover */
+}
+
+/* Styles for playlist table */
+.playlist-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.playlist-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.playlist-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Styles for playlist songs */
+.playlist-songs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.playlist-songs li {
+    margin-bottom: 10px;
+}
+
+.playlist-songs audio {
+    width: 100%;
+}
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Centering content vertically and horizontally */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); /* Unique gradient background */
+}
+
+/* Styling the heading */
+h1 {
+    font-size: 48px; /* Increase heading size for emphasis */
+    color: #ffffff; /* Change heading color to white */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+/* Styling the subheading */
+h3 {
+    font-size: 24px;
+    color: #ffffff; /* Use white color for subheading */
+}
+
+/* Styling the links */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff; /* Use white color for links */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to the links */
+    padding: 10px 20px; /* Add padding to make links more clickable */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background color on hover */
+}
+
+/* Payment button style */
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff; /* Use white color for links */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to the links */
+    padding: 10px 20px; /* Add padding to make links more clickable */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+

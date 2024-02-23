@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="navstyle.css">
+<link rel="stylesheet" href="registration.css">
+<link rel="stylesheet" href="createplaylist.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<style>
+h3{
+color:white;
+}</style>
+	<nav>
+		<ul>
+		<h3>Hello, <span th:text="${session.username}"></span></h3>
+			<li><a href="/adminhomeredirect">Home</a></li>
+
+			<li><a href="/map-songs">Add Songs</a></li>
+
+			<li><a href="/map-viewsongs">View Songs</a></li>
+
+			<li><a href="/createplaylist">Create Playlist</a></li>
+
+			<li><a href="/viewPlaylists">View Playlists</a></li>
+			
+
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+	</nav>
+	<div class="registration-form">
+		<form action="addplaylist" method="post" class="playlist-form">
+			<h1>Create Playlist</h1>
+			<label>Playlist Name</label> <input type="text" name="name"
+				style="width: 400px;"> <br>
+			<br>
+			<div th:each="songs :${songslist}" class="song-item">
+				<label th:text="${songs.name}"></label> <input type="checkbox"
+					th:name="song" th:value="${songs.id}"> <br>
+				<br>
+			</div>
+			<input type="submit" value="Add Playlist">
+		</form>
+	</div>
+</body>
+</html>

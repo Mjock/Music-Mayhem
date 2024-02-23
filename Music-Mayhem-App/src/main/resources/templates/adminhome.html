@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Home</title>
+<link rel="stylesheet" href="adminhome.css">
+<link rel="stylesheet" href="navstyle.css"> <!-- Include the CSS file -->
+</head>
+<body class="admin-home"> 
+<style>
+h3{
+color:white;
+}</style>
+<nav>
+<ul>
+<h3>Hello, <span th:text="${session.username}"></span></h3>
+<li><a href="/adminhomeredirect">Home</a></li>
+<li><a href="/map-songs">Add Songs</a></li>
+<li><a href="/map-viewsongs">View Songs</a></li>
+<li><a href="/createplaylist">Create Playlist</a></li>
+<li><a href="/viewPlaylists">View Playlists</a></li>
+
+<li><a href="/logout">Logout</a></li>
+</ul>
+</nav>
+<!-- Apply the "admin-home" class to the body -->
+<h1>Welcome to Admin Home...  </h1>
+<br/>
+<h2 th:text="${ session.username}"></h2>
+
+</body>
+</html>

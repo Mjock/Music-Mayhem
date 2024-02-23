@@ -1,0 +1,74 @@
+.playlist-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.playlist-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.playlist-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Styles for playlist songs */
+.playlist-songs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.playlist-songs li {
+    margin-bottom: 10px;
+}
+
+.playlist-songs audio {
+    width: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-top: 40px; /* Add padding to the top to avoid overlapping with the navigation bar */
+}
+
+/* Centering content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); /* Unique gradient background */
+    background-attachment: fixed; /* Ensures background remains fixed */
+    
+}
+
+/* Styling the form container */
+.registration-form {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center; /* Centering content inside the form */
+    width: 80%; /* Adjusted width */
+    max-width: 400px; /* Limiting the width of the form */
+    margin: auto; /* Center the form horizontally */
+}
+
+/* Styling the form heading */
+.registration-form h1 {
+    font-size: 45px; /* Heading font size */
+    color: White; /* Heading color */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+/* Styling for form labels */
+.registration-form label {
+    display: block; /* Make labels block-level elements */
+    margin-bottom: 10px; /* Add space below each label */
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="premiumpage.css">
+<link rel="stylesheet" href="navstyle.css">
+<meta charset="ISO-8859-1">
+<title>Premium User</title>
+</head>
+<body>
+<style>
+h3{
+color:white;
+}</style>
+<nav>
+<ul>
+<h3>Hello, <span th:text="${session.username}"></span></h3>
+<li><a href="/custhomeredirect">Home</a></li>
+<li><a href="/viewcustsongs">View Songs</a></li>
+<li><a href="/createcustplaylist">Create Playlist</a></li>
+<li><a href="/viewcustPlaylists">View Playlists</a></li>
+
+<li><a href="/logout">Logout</a></li>
+</ul>
+</nav>
+<h1 class="content">Hello Premium Customer.....</h1>
+ <h2 class="h2" th:text="${session.username}"></h2>
+
+</body>
+</html>
