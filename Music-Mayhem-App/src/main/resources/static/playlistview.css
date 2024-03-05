@@ -56,8 +56,8 @@ body {
     border-radius: 10px;
     text-align: center; /* Centering content inside the form */
     width: 80%; /* Adjusted width */
-    max-width: 400px; /* Limiting the width of the form */
-    margin: auto; /* Center the form horizontally */
+    max-width: 600px; /* Limiting the width of the form */
+    margin-top: 148px; /* Center the form horizontally */
 }
 
 /* Styling the form heading */

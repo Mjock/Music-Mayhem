@@ -2,18 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" href="navstyle.css">
-<link rel="stylesheet"  href="viewsongs.css">
+<link rel="stylesheet" href="viewsongs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Songs List</title>
  <!-- Link to your CSS file -->
 </head>
 <body>
-<style>
-h3{
-color:white;
-}
-</style>
 <nav>
 <ul>
 <h3>Hello, <span th:text="${session.username}"></span></h3>
@@ -21,27 +18,73 @@ color:white;
 <li><a href="/viewcustsongs">View Songs</a></li>
 <li><a href="/createcustplaylist">Create Playlist</a></li>
 <li><a href="/viewcustPlaylists">View Playlists</a></li>
+<li><a href="/viewfavorites">View Favorites</a></li>
 <li><a href="/logout">Logout</a></li>
 </ul>
 </nav>
 
-<div class="registration-form">
-    <h1>Songs List</h1>
-    <table border>
-        <tr>
-            <th>Name</th>
-            <th>Artist</th>
-            <th>Genre</th>
-            <th>Link</th>
-        </tr>
-        <tr th:each="song : ${songslist}">
-            <td th:text="${song.name}"></td>
-            <td th:text="${song.artist}"></td>
-            <td th:text="${song.genre}"></td>
-            <td><audio controls><source th:src="${song.link}" type="audio/mpeg"></audio></td>
-        </tr>
-    </table>
+
+</head>
+<body>
+
+<!-- Container to center and display song boxes two in a row -->
+<div class="container">
+    <!-- Display each song in a separate box -->
+    <div th:each="song : ${songslist}" class="song-box">
+        <!-- Song image -->
+        <img th:src="${song.imageUrl}" alt="Song Image" class="song-image">
+        <!-- Favorite button -->
+        <button type="button" class="favorite-btn" data-song-id="${song.id}" th:data-song-id="${song.id}">
+            <i class="fas fa-heart"></i>
+        </button>
+        <!-- Song details -->
+        
+          <div class="song-details-label">Song Name:</div>
+        <div class="song-details" th:text="${song.name}"></div>
+        <div class="song-details-label">Artist:</div>
+        <div class="song-details" th:text="${song.artist}"></div>
+        <div class="song-details-label">Genre:</div>
+        <div class="song-details" th:text="${song.genre}"></div>
+        <!-- Audio player -->
+        <div>
+            <audio controls>
+                <source th:src="${song.link}" type="audio/mpeg"></source>
+            </audio>
+        </div>
+    </div>
 </div>
+
+<!-- JavaScript to handle favorite button clicks -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all heart-shaped buttons
+        const favoriteButtons = document.querySelectorAll(".favorite-btn");
+        
+        // Add click event listener to each heart-shaped button
+        favoriteButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                // Toggle class to change heart color
+                this.querySelector("i").classList.toggle("red-heart");
+                
+                // Get song ID from data attribute
+                const songId = this.getAttribute("data-song-id");
+                // Send a request to mark the song as favorite
+                fetch("/markfavorite?songId=" + songId)
+                    .then(response => {
+                        if (response.ok) {
+                            // Show alert message
+                            alert("Song added to favorites");
+                        } else {
+                            console.error('Failed to mark song as favorite');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

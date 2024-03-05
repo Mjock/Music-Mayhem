@@ -4,7 +4,7 @@ nav {
     left: 50%; /* Align it to the left with 50% of the viewport width */
     transform: translateX(-50%); /* Center the navigation bar horizontally */
     width: 80%; /* Make it span 80% of the viewport width */
-    max-width: 800px; /* Limit the maximum width of the navigation bar */
+    max-width: 900px; /* Limit the maximum width of the navigation bar */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     padding: 20px;
     border-radius: 10px;

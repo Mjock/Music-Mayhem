@@ -17,6 +17,8 @@ String name;
 String artist;
 String genre;
 String link;
+boolean isFavorite;
+String imageUrl;
 @ManyToMany
 List<Playlist>playlist;
 public int getId() {
@@ -49,29 +51,44 @@ public String getLink() {
 public void setLink(String link) {
 	this.link = link;
 }
+public boolean isFavorite() {
+	return isFavorite;
+}
+public void setFavorite(boolean isFavorite) {
+	this.isFavorite = isFavorite;
+}
+public String getImageUrl() {
+	return imageUrl;
+}
+public void setImageUrl(String imageUrl) {
+	this.imageUrl = imageUrl;
+}
 public List<Playlist> getPlaylist() {
 	return playlist;
 }
 public void setPlaylist(List<Playlist> playlist) {
 	this.playlist = playlist;
 }
-public Songs(int id, String name, String artist, String genre, String link, List<Playlist> playlist) {
+@Override
+public String toString() {
+	return "Songs [id=" + id + ", name=" + name + ", artist=" + artist + ", genre=" + genre + ", link=" + link
+			+ ", isFavorite=" + isFavorite + ", imageUrl=" + imageUrl + ", playlist=" + playlist + "]";
+}
+public Songs(int id, String name, String artist, String genre, String link, boolean isFavorite, String imageUrl,
+		List<Playlist> playlist) {
 	super();
 	this.id = id;
 	this.name = name;
 	this.artist = artist;
 	this.genre = genre;
 	this.link = link;
+	this.isFavorite = isFavorite;
+	this.imageUrl = imageUrl;
 	this.playlist = playlist;
 }
 public Songs() {
 	super();
 	// TODO Auto-generated constructor stub
-}
-@Override
-public String toString() {
-	return "Song [id=" + id + ", name=" + name + ", artist=" + artist + ", genre=" + genre + ", link=" + link
-			;
 }
 
 }
