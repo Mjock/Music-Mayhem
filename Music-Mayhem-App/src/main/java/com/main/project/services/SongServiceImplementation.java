@@ -1,49 +1,64 @@
+// SongServiceImplementation.java
 package com.main.project.services;
 
-
-
-
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.main.project.entities.Songs;
 import com.main.project.repositories.SongsRepository;
 
-
 @Service
-public class SongServiceImplementation implements SongService  {
-@Autowired
-SongsRepository srepo;
+public class SongServiceImplementation implements SongService {
 
-@Override
-public String addSongs(Songs song) {
-	// TODO Auto-generated method stub
-	srepo.save(song);
-	return "Added";
-}
-public boolean songexist(String name) {
-	if(srepo.findByName(name)==null) {
-		return false;
+    @Autowired
+    private SongsRepository songRepository;
+
+    @Override
+    public String addSongs(Songs song) {
+    	// TODO Auto-generated method stub
+    	songRepository.save(song);
+    	return "Added";
+    }
+    public boolean songexist(String name) {
+    	if(songRepository.findByName(name)==null) {
+    		return false;
+    	}
+    	else
+    	{
+    		return true;
+    	}
+    }
+    @Override
+    public List<Songs> viewSongs() {
+        return songRepository.findAll();
+    }
+
+    @Override
+    public void updateSong(Songs song) {
+        songRepository.save(song);
+    }
+
+    @Override
+    public Songs getSongbyid(int songId) {
+        return songRepository.findById(songId).orElse(null);
+    }
+
+    @Override
+    public List<Songs> getFavoriteSongs() {
+        return songRepository.findByIsFavoriteTrue();
+    }
+
+    @Override
+    public void resetFavorites() {
+        List<Songs> songs = songRepository.findAll();
+        for (Songs song : songs) {
+            song.setFavorite(false);
+            songRepository.save(song);
+        }
+    }
+	@Override
+	public List<Songs> searchSongs(String query) {
+		// TODO Auto-generated method stub
+		return songRepository.findByNameContainingIgnoreCase(query);
 	}
-	else
-	{
-		return true;
-	}
-}
-@Override
-public List<Songs> viewSongs() {
-	List<Songs>songlist=srepo.findAll();
-	return songlist;
-}
-@Override
-public void updateSong(Songs song) {
-	srepo.save(song);
-	
-}
-
-
-
 }

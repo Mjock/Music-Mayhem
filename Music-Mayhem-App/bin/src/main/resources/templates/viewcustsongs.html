@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" href="navstyle.css">
-    <link rel="stylesheet" href="viewsongs.css">
-    <link rel="stylesheet" href="searchstyle.css"> <!-- Include the search styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="navstyle.css">
+<link rel="stylesheet" href="viewsongs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songs List</title>
-    <!-- Link to your CSS file -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Songs List</title>
+ <!-- Link to your CSS file -->
 </head>
 <body>
 <nav>
-    <ul>
-        <h3>Hello, <span th:text="${session.username}"></span></h3>
-        <li><a href="/custhomeredirect">Home</a></li>
-        <li><a href="/viewcustsongs">View Songs</a></li>
-        <li><a href="/createcustplaylist">Create Playlist</a></li>
-        <li><a href="/viewcustPlaylists">View Playlists</a></li>
-        <li><a href="/viewfavorites">View Favorites</a></li>
-        <li><a href="/logout">Logout</a></li>
-    </ul>
-    <!-- Search form -->
-   <!-- Search form -->
-<div class="search-container">
-    <form action="/search" method="get">
-        <input type="text" name="query" class="search-input" placeholder="Search songs...">
-        <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
-    </form>
-</div>
-
+<ul>
+<h3>Hello, <span th:text="${session.username}"></span></h3>
+<li><a href="/custhomeredirect">Home</a></li>
+<li><a href="/viewcustsongs">View Songs</a></li>
+<li><a href="/createcustplaylist">Create Playlist</a></li>
+<li><a href="/viewcustPlaylists">View Playlists</a></li>
+<li><a href="/viewfavorites">View Favorites</a></li>
+<li><a href="/logout">Logout</a></li>
+</ul>
 </nav>
+
+
+</head>
+<body>
 
 <!-- Container to center and display song boxes two in a row -->
 <div class="container">
@@ -45,7 +39,7 @@
         </button>
         <!-- Song details -->
         
-        <div class="song-details-label">Song Name:</div>
+          <div class="song-details-label">Song Name:</div>
         <div class="song-details" th:text="${song.name}"></div>
         <div class="song-details-label">Artist:</div>
         <div class="song-details" th:text="${song.artist}"></div>

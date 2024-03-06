@@ -7,10 +7,8 @@ nav {
     max-width: 900px; /* Limit the maximum width of the navigation bar */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center; /* Centering content inside the nav */
-    padding-bottom: 20px; /* Add padding to the bottom of the navigation bar */
-    z-index: 999; /* Ensure the navigation bar appears above other elements */
 }
 
 nav ul {
@@ -45,5 +43,5 @@ nav ul li span:hover {
 
 /* Adjust content position to make space for the fixed nav bar */
 body {
-  padding-top: 120px; /* Adjust the top padding to match the height of the nav bar */
+    padding-top: 60px; /* Adjust the top padding to match the height of the nav bar */
 }

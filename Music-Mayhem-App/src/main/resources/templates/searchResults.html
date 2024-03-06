@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your head content here -->
+    <title>Search results</title>
+</head>
+<style>
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Centering content vertically and horizontally */
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); /* Unique gradient background */
+    background-attachment: fixed; /* Ensures background remains fixed */
+}
+
+.song-details-label {
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-align:center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     /* Adjust this value to create space between the navigation bar and the songs */
+}
+
+.song-box {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-right: 20px;
+    width: calc(27% - 20px); /* 50% width with margin */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.song-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Maximum width for the image */
+    max-height: 300px; /* Maximum height for the image */
+    margin-bottom: 10px;
+}
+
+.song-details {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 12px; /* Adjust margin as needed */
+    border: 1px solid black;
+    text-align: center; /* Center text horizontally */
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+audio {
+    margin: 0 auto;
+    display: flex;
+    width: 320px;
+}
+
+.favorite-btn i {
+    color: white;
+    font-size: 24px;
+}
+
+.favorite-btn i.red-heart {
+    color: red;
+}
+
+
+
+
+</style>
+<body>
+    <h1>Search Results</h1>
+    <div class="container">
+        <!-- Display each song in a separate box -->
+        <div th:each="song : ${searchResults}" class="song-box">
+            <!-- Song image -->
+            <img th:src="${song.imageUrl}" alt="Song Image" class="song-image">
+            <!-- Favorite button -->
+            <button type="button" class="favorite-btn" data-song-id="${song.id}" th:data-song-id="${song.id}">
+                <i class="fas fa-heart"></i>
+            </button>
+            <!-- Song details -->
+            <div class="song-details-label">Song Name:</div>
+            <div class="song-details" th:text="${song.name}"></div>
+            <div class="song-details-label">Artist:</div>
+            <div class="song-details" th:text="${song.artist}"></div>
+            <div class="song-details-label">Genre:</div>
+            <div class="song-details" th:text="${song.genre}"></div>
+            <!-- Audio player -->
+            <div>
+                <audio controls>
+                    <source th:src="${song.link}" type="audio/mpeg"></source>
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

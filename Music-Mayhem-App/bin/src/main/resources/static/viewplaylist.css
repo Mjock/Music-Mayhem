@@ -1,0 +1,52 @@
+/* Resetting default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Centering content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000, #000000); /* Unique gradient background */
+    background-attachment: fixed; /* Ensures background remains fixed */
+}
+
+.registration-form {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    padding: 40px; /* Decreased padding to reduce height */
+    border-radius: 10px;
+    text-align: center; /* Centering content inside the form */
+    width: 80%; /* Adjusted width */
+    max-width: 800px; /* Limiting the width of the form */
+    margin-top: 700px; /* Updated margin-top to create space */
+}
+
+/* Styling the form heading */
+.registration-form h1 {
+    font-size: 45px; /* Heading font size */
+    color: white; /* Heading color */
+}
+
+/* Styling for table */
+.registration-form table {
+    width: 100%; /* Table width */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 20px; /* Add space above the table */
+}
+
+/* Styling for table headers */
+.registration-form th {
+    background-color: #333; /* Header background color */
+    color: white; /* Header text color */
+    padding: 10px; /* Header padding */
+}
+
+/* Styling for table cells */
+.registration-form td {
+    color: white; /* Text color */
+    margin-top: 14px; /* Adjusted margin-top */
+}

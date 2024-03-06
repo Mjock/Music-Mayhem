@@ -12,4 +12,5 @@ import com.main.project.entities.Songs;
 public interface SongsRepository extends JpaRepository<Songs,Integer> {
 	public Songs findByName(String name);
 	public List<Songs> findByIsFavoriteTrue();
+	public List<Songs> findByNameContainingIgnoreCase(String query);
 }

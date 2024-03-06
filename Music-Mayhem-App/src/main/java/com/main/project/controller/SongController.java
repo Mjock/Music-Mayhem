@@ -58,7 +58,11 @@ public String viewFavorites(Model model) {
     model.addAttribute("favorites", favorites);
     return "favoritesongs";
 }
-
-
+@GetMapping("/search")
+public String search(@RequestParam("query") String query, Model model) {
+    List<Songs> searchResults = songserv.searchSongs(query);
+    model.addAttribute("searchResults", searchResults);
+    return "searchResults"; // Return the name of your search results view
 }
 
+}

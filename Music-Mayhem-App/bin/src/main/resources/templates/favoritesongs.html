@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="navstyle.css">
+<link rel="stylesheet" href="viewsongs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<nav>
+<ul>
+<h3>Hello, <span th:text="${session.username}"></span></h3>
+<li><a href="/custhomeredirect">Home</a></li>
+<li><a href="/viewcustsongs">View Songs</a></li>
+<li><a href="/createcustplaylist">Create Playlist</a></li>
+<li><a href="/viewcustPlaylists">View Playlists</a></li>
+<li><a href="/viewfavorites">View Favorites</a></li>
+<li><a href="/logout">Logout</a></li>
+</ul>
+</nav>
+
+</head>
+<body>
+
+<!-- Container to center and display song boxes two in a row -->
+<div class="container">
+    <!-- Display each favorite song in a separate box -->
+    <div th:each="song : ${favorites}" class="song-box">
+        <!-- Song details -->
+          <img th:src="${song.imageUrl}" alt="Song Image" class="song-image">
+        <div class="song-details" th:text="${song.name}"></div>
+        <div class="song-details" th:text="${song.artist}"></div>
+        <div class="song-details" th:text="${song.genre}"></div>
+        <!-- Audio player -->
+        <div>
+            <audio controls>
+                <source style="max-width: 200px;" th:src="${song.link}" type="audio/mpeg"></source>
+            </audio>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
