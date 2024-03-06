@@ -56,9 +56,12 @@ public class SongServiceImplementation implements SongService {
             songRepository.save(song);
         }
     }
+<<<<<<< HEAD
 	@Override
 	public List<Songs> searchSongs(String query) {
 		// TODO Auto-generated method stub
 		return songRepository.findByNameContainingIgnoreCase(query);
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/Mjock/Music-Mayhem.git
 }
