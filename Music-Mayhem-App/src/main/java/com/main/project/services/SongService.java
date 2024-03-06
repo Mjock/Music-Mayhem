@@ -12,8 +12,7 @@ public interface SongService {
     Songs getSongbyid(int songId);
     List<Songs> getFavoriteSongs();
     void resetFavorites();
-<<<<<<< HEAD
+
 	List<Songs> searchSongs(String query);
-=======
->>>>>>> branch 'master' of https://github.com/Mjock/Music-Mayhem.git
+
 }
