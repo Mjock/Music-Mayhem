@@ -36,7 +36,7 @@ h3 {
     margin-right: 20px;
     width: calc(27% - 20px); /* 50% width with margin */
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .song-image {
